@@ -1,0 +1,26 @@
+
+<form>
+  <label for="cep">Cep</label><br>
+  <input mask="00000-000" type="text" id="cep" name="cep" #cep>
+</form>
+
+<br>
+
+<button (click)="consultaCep(cep.value);">Search</button>
+<button (click)="handleClear()">Clear input field</button>
+
+<br><br>
+
+
+<ag-grid-angular
+style="width: 820px; height: 100vh"
+class="ag-theme-alpine"
+[rowData]="rowData"
+[columnDefs]="columnDefs"
+[getRowNodeId]="getRowNodeId"
+(gridReady)="onGridReady($event)"
+></ag-grid-angular>
+
+
+
+
